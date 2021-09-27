@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+body{
+    @apply bg-gradient-to-r from-pink-light to-pink-dark ;
+    @apply text-main-color
+}
+.my-masonry-grid {
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: flex;
+    margin-left: -30px; 
+    width: auto;
+}
+.my-masonry-grid_column {
+padding-left: 30px; 
+background-clip: padding-box;
+}
+
+.my-masonry-grid_column > div { 
+margin-bottom: 30px;
+} 
+.react-multi-carousel-list{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
