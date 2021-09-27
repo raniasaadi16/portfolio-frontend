@@ -45,9 +45,9 @@ export default function Form() {
             </div>
             <form className='bg-pink-light p-5 rounded-md -mt-3 md:-mt-7' onSubmit={sendEmail}>
                 <p className='text-sm md:mt-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut </p>
-                <div className='grid grid-cols-2 gap-x-3 mt-5'>
-                    <input type="email" className='rounded-md border border-pink-dark px-3 py-1' placeholder='Email' value={email} onChange={e => setemail(e.target.value)} required />
-                    <input type="text" className='rounded-md border border-pink-dark px-3 py-1' placeholder='Name' value={name} onChange={e => setname(e.target.value)} required />
+                <div className='md:grid md:grid-cols-2 md:gap-x-3 mt-5'>
+                    <input type="email" className='rounded-md border border-pink-dark px-3 py-1 w-full' placeholder='Email' value={email} onChange={e => setemail(e.target.value)} required />
+                    <input type="text" className='rounded-md border border-pink-dark px-3 py-1 mt-5 md:mt-0 w-full' placeholder='Name' value={name} onChange={e => setname(e.target.value)} required />
                 </div>
                 <div className='mt-5'>
                     <input type="text" className='rounded-md border border-pink-dark px-3 w-full py-1' placeholder='Subject' value={subject} onChange={e => setsubject(e.target.value)} required/>
