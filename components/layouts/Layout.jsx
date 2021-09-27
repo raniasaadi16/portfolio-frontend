@@ -13,7 +13,7 @@ export default function Layout({children}) {
             <div className='absolute top-0 left-0 h-[110px] sm:w-[600px] w-full' >
                 <Image src='/img/top-img.webp' layout='fill' objectFit='cover'/>
             </div>
-            <main className={path === '/' ? 'relative h-screen px-8 py-6 rounded-lg' : 'relative h-full px-8 py-6'}>
+            <main className={path === '/' ? 'relative h-screen px-3 sm:px-4 md:px-8 py-6 rounded-lg' : 'relative h-full px-3 sm:px-4 md:px-8 py-6'}>
                 <Nav isAbsolute={path === '/'}/>
                 {children}
             </main>
