@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Typewriter from 'typewriter-effect';
 export default function Text() {
     return (
-        <div className='absolute top-1/2 -translate-y-1/2 text-white px-8 sm:px-16 grid md:grid-cols-2'>
+        <div className='absolute top-1/2 -translate-y-1/2 text-white px-8 sm:px-16 grid md:grid-cols-2 w-full'>
             <div className='m-auto'>
                 <h3 className='text-4xl font-mono'>Hello</h3>
                 <h3 className='text-4xl font-bold mt-2 mb-7'>
