@@ -22,7 +22,7 @@ export default function portfolio({projects}) {
                         <h2 className='font-mono text-white text-2xl md:text-3xl'>My Portfolio</h2>
                         <button className='px-3 py-1 bg-pink-light text-white rounded-lg mt-1 mx-auto hover:scale-105 transition duration-75 ease-out md:mt-5'>
                             <Link href='/'>Hire Me</Link>
-                        </button>
+                        </button>  
                     </div>
                 </div>
                 <Filter tag={tag} settag={settag} />
