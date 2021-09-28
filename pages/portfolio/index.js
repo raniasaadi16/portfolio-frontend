@@ -4,16 +4,21 @@ import { useEffect, useState } from 'react';
 import Filter from '../../components/portfolio/Filter'
 import Grid from '../../components/portfolio/Grid'
 
-export default function portfolio({projects}) {
+function portfolio({projects}) {
+    const [data, setdata] = useState(projects || data)
     const [tag, settag] = useState('All');
     const [filter, setfilter] = useState([])
     useEffect(() => {
         if( tag === 'All'){
-            setfilter(projects)
+            setfilter(data)
         }else{
-            setfilter(projects.filter(project => project.category === tag));
+            setfilter(data.filter(project => project.category === tag));
         }
     }, [tag]);
+    useEffect(async () => {
+        const projects = await axios.get(`https://rania-portfolio.herokuapp.com/api/projects`)
+        setdata(projects.data.data.projects)
+    }, [])
     return (
         <div>
             <div className='relative h-full bg-white  rounded-lg pb-32'>
@@ -32,12 +37,13 @@ export default function portfolio({projects}) {
     )
 }
 
-export async function getServerSideProps(){
-    const projects = await axios.get(`${process.env.PROXY}/projects`)
+portfolio.getInitialProps = async ctx => {
+    const projects = await axios.get(`https://rania-portfolio.herokuapp.com/api/projects`)
 
     return{
-        props:{
-            projects: projects.data.data.projects,
-        }
+        projects: projects.data.data.projects,
+
     }
 }
+
+export default portfolio;
