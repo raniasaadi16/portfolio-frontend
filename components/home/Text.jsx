@@ -18,10 +18,12 @@ export default function Text() {
                         }}
                         />
                     </span>
-                </h3>
-                <button className='bg-pink-light rounded-lg px-3 py-2 hover:scale-105 transition duration-100 ease-out'>
-                    <Link href='/about'>About me</Link>
-                </button>
+                </h3>             
+                    <Link href='/about'>
+                        <button className='bg-pink-light rounded-lg px-3 py-2 hover:scale-105 transition duration-100 ease-out'>
+                            About me
+                        </button>
+                    </Link>
             </div>
             <div className='relative w-[300px] h-[300px] m-auto hidden md:block'>
                 <Image src='/img/homeSvg.svg' layout='fill' />

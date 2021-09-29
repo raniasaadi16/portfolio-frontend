@@ -14,11 +14,11 @@ export default function AboutMe() {
                         <h2 className='font-mono text-2xl lg:text-white md:text-3xl'>About Me</h2>
                         <p className='lg:mt-12 mt-4 mb-4 md:text-lg'>
                             A full stack developer who enjoy learning everything about development, knowledgeable in user interfaces and experiences , front end and back end development, equipped with diverse and promising skills. Able to effectively self-manage during independent projects, as well as collaborate in a team setting.                        </p>
-                        <button className='bg-pink-light rounded-lg px-3 py-2 hover:scale-105 transition duration-100 ease-out text-white'>
                             <Link href='/portfolio'>
-                                Check Portfolio
-                            </Link>
-                        </button>
+                                <button className='bg-pink-light rounded-lg px-3 py-2 hover:scale-105 transition duration-100 ease-out text-white'>
+                                    Check Portfolio
+                                </button>
+                            </Link>                 
                     </div>
                 </div>
 
