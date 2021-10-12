@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Filter from '../../components/portfolio/Filter'
 import Grid from '../../components/portfolio/Grid'
 
-export default function portfolio({projects}) {
+export default function portfolio({projects, categories}) {
     const [tag, settag] = useState('All');
     const [filter, setfilter] = useState([])
     useEffect(() => {
@@ -25,8 +25,8 @@ export default function portfolio({projects}) {
                         </button>  
                     </div>
                 </div>
-                <Filter tag={tag} settag={settag} />
-                <Grid projects={filter} />
+                <Filter tag={tag} settag={settag} categories={categories} />
+                <Grid projects={filter}/>
             </div>
         </div>
     )
@@ -34,10 +34,11 @@ export default function portfolio({projects}) {
 
 export async function getServerSideProps(){
     const projects = await axios.get(`${process.env.PROXY}/projects`)
-
+    const categories = await axios.get(`${process.env.PROXY}/projects/categpries`)
     return{
         props:{
             projects: projects.data.data.projects,
+            categories: categories.data.data.categories,
         }
     }
 }

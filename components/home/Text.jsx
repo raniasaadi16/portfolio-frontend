@@ -11,7 +11,7 @@ export default function Text() {
                     <span className='text-pink-light'>
                         <Typewriter
                         options={{
-                            strings: ['Full stack Developer','Ui/Ux Designer'],
+                            strings: ['Full stack Developer','Ui Designer'],
                             autoStart: true,
                             loop: true,
                             deleteSpeed:20
