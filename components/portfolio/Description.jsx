@@ -6,7 +6,7 @@ export default function Description({project}) {
         <div className='space-y-4'>
             <div>
                 <h3 className='text-lg font-semibold text-pink-light'>{project.projectName}</h3>
-                <p>{project.description}</p>
+                <div dangerouslySetInnerHTML={{__html: `${project.description}`}}></div>
             </div>
             <div>
                 <h3 className='text-lg font-semibold text-pink-light'>Tools and technologies</h3>

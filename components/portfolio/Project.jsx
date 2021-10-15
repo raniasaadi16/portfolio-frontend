@@ -16,7 +16,7 @@ export default function Project({projectId}) {
             <div className='bg-white py-5 px-2 md:w-8/12 w-full rounded-sm'>
                 <Gallery pictures={data.gallery} alt={data.projectName}/>
             </div>
-            <div className='bg-white py-3 px-4 rounded-sm mb-5 md:mb-0 border-t-8 border-pink-light md:w-[30%] md:h-[max-content]'>
+            <div className='py-3 px-4 rounded-sm mb-5 md:mb-0 border-t-8 border-pink-light md:w-[30%] md:h-[max-content]' style={{background: '#f9f9f9'}}>
                 <Description project={data}/>
             </div>
         </div>
