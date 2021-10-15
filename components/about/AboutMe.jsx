@@ -8,7 +8,7 @@ export default function AboutMe() {
             <div className='relative bg-main-color h-[84px] md:h-[160px]'></div>
             <div className='lg:flex lg:items-center px-3 md:px-12 relative -mt-7 md:-mt-24'>
                     <div className='relative w-full h-52 md:h-[320px] border-18 border-white'>
-                        <Image src='/img/home-img.webp' layout='fill' objectFit='cover'/>
+                        <Image src='/img/about.jpg' layout='fill' objectFit='cover'/>
                     </div>
                     <div className='px-5 lg:px-0 lg:ml-5'>
                         <h2 className='font-mono text-2xl lg:text-white md:text-3xl'>About Me</h2>

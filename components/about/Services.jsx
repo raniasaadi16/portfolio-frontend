@@ -1,5 +1,4 @@
 import { CheckIcon } from '@heroicons/react/solid';
-import Link from 'next/link'
 
 export default function Services({services}) {
     return (
@@ -18,7 +17,7 @@ export default function Services({services}) {
                             ))}
                         </ul>
                         <button className='px-3 py-1 bg-main-color text-pink-dark rounded-lg mt-4 hover:scale-105 transition duration-75 ease-out md:mt-5'>
-                            <Link href='/'>Hire Me</Link>
+                            <a href='https://www.fiverr.com/raniasa' target='_blank'>Hire Me</a>
                         </button>
                     </div>
                 ))}

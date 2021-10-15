@@ -8,24 +8,8 @@ import axios from 'axios';
 
 export default function reviews({reviews}) {
     const responsiveTeam = {
-        superLargeDesktop: {
-          breakpoint: { max: 4000, min: 2000 },
-          items: 1
-        },
-        desktop: {
-          breakpoint: { max: 2000, min: 1190 },
-          items: 1
-        },
-        tablet: {
-          breakpoint: { max: 1190, min: 600 },
-          items: 1
-        },
-        tabletLg: {
-            breakpoint: { max: 959, min: 790 },
-            items: 1
-        },
-        mobile: {
-          breakpoint: { max: 600, min: 0 },
+        Allscreens: {
+          breakpoint: { max: 4000, min: 0 },
           items: 1
         }
     };
@@ -54,7 +38,7 @@ export default function reviews({reviews}) {
             <div className='relative h-full bg-white  rounded-lg pb-36'>
                 <div className='relative bg-main-color h-[100px] md:h-[160px] flex justify-center items-center'>
                     <div className='flex flex-col'>
-                        <h2 className='font-mono text-white text-2xl md:text-3xl'>My Client Reviews</h2>
+                        <h2 className='font-mono text-white text-2xl md:text-3xl'>Some of my client's reviews</h2>
                     </div>
                 </div>
                 <div className='mt-8 md:mt-28 px-7 md:px-28'>

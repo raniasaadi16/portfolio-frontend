@@ -29,11 +29,12 @@ export default function Description({project}) {
                         </Link>
                     </button>
                 )}
+                {project.sourceCode.length > 0 && <h3 className='text-lg font-semibold text-pink-light'>Source Code</h3>}
                 {project.sourceCode.length > 0 && (
                     project.sourceCode.map((code, index) => (
                         <div key={index}>
                             <p className='inline-block mr-4'>{code.name}: </p>
-                            <button className='px-3 py-1 bg-gray-900 text-white rounded-lg hover:scale-105 transition duration-75 ease-out block'>
+                            <button className='px-3 py-1 bg-gray-900 text-white rounded-lg hover:scale-105 transition duration-75 ease-out inline-block'>
                                 <Link href={code.url}>
                                     <a target="_blank">
                                         github <Icon icon="akar-icons:github-fill" className='inline-block ml-2'/>

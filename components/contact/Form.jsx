@@ -44,7 +44,7 @@ export default function Form() {
                 <Image src='/img/form.png' layout='fill'/>
             </div>
             <form className='bg-pink-light p-5 rounded-md -mt-3 md:-mt-7' onSubmit={sendEmail}>
-                <p className='text-sm md:mt-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut </p>
+                <p className='text-sm md:mt-5'>*please provide a valid email so I will be able to reply your message </p>
                 <div className='md:grid md:grid-cols-2 md:gap-x-3 mt-5'>
                     <input type="email" className='rounded-md border border-pink-dark px-3 py-1 w-full' placeholder='Email' value={email} onChange={e => setemail(e.target.value)} required />
                     <input type="text" className='rounded-md border border-pink-dark px-3 py-1 mt-5 md:mt-0 w-full' placeholder='Name' value={name} onChange={e => setname(e.target.value)} required />

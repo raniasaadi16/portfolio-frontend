@@ -20,9 +20,11 @@ export default function portfolio({projects, categories}) {
                 <div className='relative bg-main-color h-[100px] md:h-[160px] flex justify-center items-center'>
                     <div className='flex flex-col'>
                         <h2 className='font-mono text-white text-2xl md:text-3xl'>My Portfolio</h2>
-                        <button className='px-3 py-1 bg-pink-light text-white rounded-lg mt-1 mx-auto hover:scale-105 transition duration-75 ease-out md:mt-5'>
-                            <Link href='/'>Hire Me</Link>
-                        </button>  
+                        <Link href='/contact'>
+                            <button className='px-3 py-1 bg-pink-light text-white rounded-lg mt-1 mx-auto hover:scale-105 transition duration-75 ease-out md:mt-5'>
+                                Hire Me
+                            </button>  
+                        </Link>
                     </div>
                 </div>
                 <Filter tag={tag} settag={settag} categories={categories} />
@@ -33,7 +35,9 @@ export default function portfolio({projects, categories}) {
 }
 
 export async function getServerSideProps(){
-    const projects = await axios.get(`${process.env.PROXY}/projects`)
+    const projects = await axios.get(`${process.env.PROXY}/projects`, {
+        headers: {'Access-Control-Allow-Credentials': true}
+    })
     const categories = await axios.get(`${process.env.PROXY}/projects/categories`)
     return{
         props:{
