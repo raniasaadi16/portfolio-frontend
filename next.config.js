@@ -3,7 +3,7 @@ module.exports = {
       proxy: process.env.PROXY
     },
     images: {
-      domains: ['drive.google.com','images.unsplash.com']
+      domains: ['drive.google.com','images.unsplash.com', 'res.cloudinary.com']
     },
     async rewrites() {
       return [
