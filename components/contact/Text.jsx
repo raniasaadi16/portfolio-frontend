@@ -14,7 +14,7 @@ export default function Text() {
                         <Link href='/contact'>
                             <a>
                                 <Icon icon="dashicons:email" className='inline-block mr-3 text-pink-dark md:text-lg'/>
-                                saadirania406@gmail.com
+                                rania@raniadev.tech
                             </a>
                         </Link>
                     </div>
