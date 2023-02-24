@@ -24,7 +24,7 @@ export default function Form() {
         const body = {name, email, subject, message}
         setloading(true)
         try{
-            const data = await axios.post(`https://rania-portfolio.herokuapp.com/api/user/contact`, JSON.stringify(body), config )
+            const data = await axios.post(`${process.env.NEXT_PUBLIC_PROXY}/user/contact`, JSON.stringify(body), config )
             setmsg(data.data)
             setname('')
             setemail('')

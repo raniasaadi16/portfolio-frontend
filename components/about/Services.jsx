@@ -1,4 +1,4 @@
-import { CheckIcon } from '@heroicons/react/solid';
+// import { CheckIcon } from '@heroicons/react/solid';
 
 export default function Services({services}) {
     return (
@@ -11,7 +11,7 @@ export default function Services({services}) {
                         <ul className='mt-5 text-white space-y-1'>
                             {service.options.map((op,index) => (
                                 <li key={index}>
-                                    <CheckIcon className='h-5 inline-block text-pink-dark mr-2'/>
+                                    {/* <CheckIcon className='h-5 inline-block text-pink-dark mr-2'/> */}
                                     {op}
                                 </li>
                             ))}
