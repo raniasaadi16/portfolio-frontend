@@ -16,7 +16,7 @@
     "react-stars": "^2.2.5",
     "sharp": "^0.31.3",
     "swr": "^2.0.4",
-    "typewriter-effect": "^2.18.2"
+    "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
     "@iconify/react": "^3.0.1",
