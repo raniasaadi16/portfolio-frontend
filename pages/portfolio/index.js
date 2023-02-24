@@ -35,10 +35,10 @@ export default function portfolio({projects, categories}) {
 }
 
 export async function getServerSideProps(){
-    const projects = await axios.get(`${process.env.PROXY}/projects`, {
+    const projects = await axios.get(`${process.env.NEXT_PUBLIC_PROXY}/projects`, {
         headers: {'Access-Control-Allow-Credentials': true}
     })
-    const categories = await axios.get(`${process.env.PROXY}/projects/categories`)
+    const categories = await axios.get(`${process.env.NEXT_PUBLIC_PROXY}/projects/categories`)
     return{
         props:{
             projects: projects.data.data.projects,

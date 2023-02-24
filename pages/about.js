@@ -21,8 +21,8 @@ export default function about({services, skills}) {
 }
 
 export async function getStaticProps(){
-    const services = await axios.get(`${process.env.PROXY}/services`)
-    const skills = await axios.get(`${process.env.PROXY}/skills`)
+    const services = await axios.get(`${process.env.NEXT_PUBLIC_PROXY}/services`)
+    const skills = await axios.get(`${process.env.NEXT_PUBLIC_PROXY}/skills`)
 
     return{
         props:{

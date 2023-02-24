@@ -5,7 +5,8 @@ import axios from 'axios';
 
 export default function Project({projectId}) {
      const { data, error } = useSWR(`/api`, async () => {
-        const res = await (await axios.get(`https://rania-portfolio.herokuapp.com/api/projects/${projectId}`));
+        const res = await (await axios.get(`${process.env.NEXT_PUBLIC_PROXY}/projects/${projectId}`));
+        console.log(res.data)
         return res.data.data.project
      });
     

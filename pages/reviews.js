@@ -60,7 +60,7 @@ export default function reviews({reviews}) {
 }
 
 export async function getStaticProps(){
-    const reviews = await axios.get(`${process.env.PROXY}/reviews`)
+    const reviews = await axios.get(`${process.env.NEXT_PUBLIC_PROXY}/reviews`)
 
     return{
         props:{
