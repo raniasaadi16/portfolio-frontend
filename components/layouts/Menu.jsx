@@ -23,9 +23,11 @@ export default function Menu({open, onClose}) {
                         <Link href='/about'>ABOUT</Link>
                     </li><li className='hover:scale-125 hover:text-pink-dark transition duration-150 ease-out' onClick={onClose}>
                         <Link href='/portfolio'>PORTFOLIO</Link>
-                    </li><li className='hover:scale-125 hover:text-pink-dark transition duration-150 ease-out' onClick={onClose}>
+                    </li>
+                    {/* <li className='hover:scale-125 hover:text-pink-dark transition duration-150 ease-out' onClick={onClose}>
                         <Link href='/reviews'>REVIEWS</Link>
-                    </li><li className='hover:scale-125 hover:text-pink-dark transition duration-150 ease-out' onClick={onClose}>
+                    </li> */}
+                    <li className='hover:scale-125 hover:text-pink-dark transition duration-150 ease-out' onClick={onClose}>
                         <Link href='/contact'>CONTACT</Link>
                     </li>
                 </ul>

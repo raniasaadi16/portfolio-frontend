@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       colors: {
         'pink-dark': '#EE9CA7',
-        'pink-light' : '#FFDDE1',
+        'pink-light' : 'rgb(246, 207, 211)',
         'main-color': '#6D6875',
         'dashboard': '#FAF3F2',
         'black': '#000'

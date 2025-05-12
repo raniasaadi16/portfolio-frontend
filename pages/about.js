@@ -23,11 +23,12 @@ export default function about({services, skills}) {
 export async function getStaticProps(){
     const services = await axios.get(`${process.env.NEXT_PUBLIC_PROXY}/services`)
     const skills = await axios.get(`${process.env.NEXT_PUBLIC_PROXY}/skills`)
+    
 
     return{
         props:{
-            skills: skills.data.data.skills,
-            services: services.data.data.services
+            skills: skills.data.data.skills.sort((a,b)=>a.order-b.order),
+            services: services.data.data.services.sort((a,b)=>a.order-b.order)
         },
         revalidate: 1800
     }

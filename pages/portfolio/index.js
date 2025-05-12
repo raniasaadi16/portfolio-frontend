@@ -27,7 +27,7 @@ export default function portfolio({projects, categories}) {
                         </Link>
                     </div>
                 </div>
-                <Filter tag={tag} settag={settag} categories={categories} />
+                {/* <Filter tag={tag} settag={settag} categories={categories} /> */}
                 <Grid projects={filter}/>
             </div>
         </div>
@@ -41,7 +41,7 @@ export async function getServerSideProps(){
     const categories = await axios.get(`${process.env.NEXT_PUBLIC_PROXY}/projects/categories`)
     return{
         props:{
-            projects: projects.data.data.projects,
+            projects: projects.data.data.projects.sort((a,b)=>a.featured-b.featured),
             categories: categories.data.data.categories,
         }
     }

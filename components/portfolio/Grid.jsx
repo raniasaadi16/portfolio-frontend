@@ -13,9 +13,8 @@ export default function Grid({projects}) {
         600: 1,
         960: 2
     }
-
     return (
-        <div className='mt-5 md:mt-12 px-7 md:px-24'>
+        <div className='mt-5 md:mt-12 px-7 md:px-24 max-w-[1450px] mx-auto'>
            <Masonry
             breakpointCols={responsiveGallery}
             className="my-masonry-grid"
@@ -25,7 +24,10 @@ export default function Grid({projects}) {
                         <div className='relative w-full h-44 block'>
                             <Link href={`/portfolio/?projectId=${project._id}`} as={`/portfolio/projects/${project._id}`}>
                                 <a>
-                                    <Image src={project.picture} alt={project.projectName} layout='fill' objectFit='contain' className='rounded-md'/>
+                                    {project.picture && (
+                                        <Image src={project.picture} alt={project.projectName} layout='fill' objectFit='contain' className='rounded-md'/>
+
+                                    )}
                                 </a>
                             </Link>
                         </div>
